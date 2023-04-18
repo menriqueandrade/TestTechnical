@@ -7,6 +7,7 @@ import { PostService } from 'src/app/core/services/post.service';
   styleUrls: ['./datatable.component.css']
 })
 export class DatatableComponent {
+
   numResults = 10;
   resultsToShow = this.numResults;
   public posts: Array<any> = []
@@ -20,6 +21,20 @@ export class DatatableComponent {
       }
     )
   }
+
+  openModal() {
+    const modelDiv =  document.getElementById('myModal');
+    if(modelDiv!= null){
+      modelDiv.style.display = 'block';
+    }
+  }
+  closeModal() {
+    const modelDiv =  document.getElementById('myModal');
+    if(modelDiv!= null){
+      modelDiv.style.display = 'none';
+    }
+  }
+  // leer mas
   loadMore() {
     this.resultsToShow += this.numResults;
   }

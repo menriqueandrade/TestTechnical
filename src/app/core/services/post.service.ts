@@ -20,4 +20,16 @@ export class PostService {
       headers: header
     });
   }
+
+  addPost(){
+    let header = new HttpHeaders()
+    .set('Type-content', 'aplication/json')
+    return this.http.post(this._url, {
+      title: 'MANUEL',
+      body: 'bar',
+      userId: 1
+    },{
+      headers: header
+    });
+  }
 }

@@ -2,8 +2,23 @@
     <div class="card-header">
         List Posts
         <hr>
-        <a routerLink="/add-employee" class="btn btn-success"> Add Posts </a>
+        <button class="btn btn-success" (click)="openModal()" > Add Posts </button>
+        <div class="modal" id="myModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
 
+
+                    <app-modal>
+                        
+                    </app-modal>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" (click)="closeModal()" data-bs-dismiss="modal">Close</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
     </div>
     <div class="card-body">
         <div class="table-responsive">
