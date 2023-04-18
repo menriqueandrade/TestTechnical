@@ -1,0 +1,36 @@
+<div class="card">
+    <div class="card-header">
+        List Posts
+        <hr>
+        <a routerLink="/add-employee" class="btn btn-success"> Add Posts </a>
+
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-primary">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">TITLE</th>
+                        <th scope="col">BODY</th>
+                        <th scope="col">ACTIONS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let post of posts.slice(0, resultsToShow)">
+                        <td scope="row">{{post.id}}</td>
+                        <td scope="row">{{post.title}}</td>
+                        <td scope="row">{{post.body}}</td>
+                        <td>
+                            <a routerLink="" class="btn btn-info"> Editar </a>
+                            <a class="btn btn-danger" role="button">Eliminar</a>
+                    </tr>
+
+                </tbody>
+            </table>
+            <button class="btn btn-primary" (click)="loadMore()">Cargar más</button>
+        </div>
+
+    </div>
+
+</div>
